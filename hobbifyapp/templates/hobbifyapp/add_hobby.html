@@ -1,0 +1,15 @@
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<!--Register-->
+<div class="container py-5">
+    <h1>Add Hobby</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ add_hobby_form|crispy }}
+        <button class="btn btn-primary" type="submit">Add Hobby</button>
+    </form>
+</div>
+
+{% endblock %}
